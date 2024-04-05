@@ -3,50 +3,50 @@ const gameCombinations = [
   {
     jogador1: "Pedra",
     jogador2: "Pedra",
-    expectedResult: "Empate!",
+    expectedResult: "Empate!"
   },
   {
     jogador1: "Pedra",
     jogador2: "Tesoura",
-    expectedResult: "Jogador 1 venceu!",
+    expectedResult: "Jogador 1 venceu!"
   },
   {
     jogador1: "Pedra",
     jogador2: "Papel",
-    expectedResult: "Jogador 2 venceu!",
+    expectedResult: "Jogador 2 venceu!"
   },
   // Papel
   {
     jogador1: "Papel",
     jogador2: "Papel",
-    expectedResult: "Empate!",
+    expectedResult: "Empate!"
   },
   {
     jogador1: "Papel",
     jogador2: "Pedra",
-    expectedResult: "Jogador 1 venceu!",
+    expectedResult: "Jogador 1 venceu!"
   },
   {
     jogador1: "Papel",
     jogador2: "Tesoura",
-    expectedResult: "Jogador 2 venceu!",
+    expectedResult: "Jogador 2 venceu!"
   },
   // Tesoura
   {
     jogador1: "Tesoura",
     jogador2: "Tesoura",
-    expectedResult: "Empate!",
+    expectedResult: "Empate!"
   },
   {
     jogador1: "Tesoura",
     jogador2: "Papel",
-    expectedResult: "Jogador 1 venceu!",
+    expectedResult: "Jogador 1 venceu!"
   },
   {
     jogador1: "Tesoura",
     jogador2: "Pedra",
-    expectedResult: "Jogador 2 venceu!",
-  },
+    expectedResult: "Jogador 2 venceu!"
+  }
 ];
 
 function domFilling(index, result) {
@@ -105,7 +105,7 @@ function testPlayRockPaperScissor() {
       jogador2,
       expected,
       result,
-      pass: result === expected,
+      pass: result === expected
     });
   }
 
@@ -122,7 +122,7 @@ document.querySelector("#btn-test-1").addEventListener("click", () => {
       domFilling(i, res[i]);
     }
 
-    const everyTestPassed = res.every((element) => element["pass"] === true);
+    const everyTestPassed = res.every(element => element["pass"] === true);
     outputMessage = everyTestPassed
       ? "Todos os testes passaram! Parabéns 🚀."
       : "Alguns testes não passaram. Clique sobre o teste para observar o resultado obtido versus o resultado esperado.";
